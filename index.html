@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritório Nogueiras – Advocacia e Consultoria Jurídica</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            Escritório Nogueiras<br>
+            <small>Miriam Nogueira – Advogada | OAB/MS 23.907</small>
+        </div>
+
+        <nav class="nav">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#atendimento" class="nav-link">Atendimento</a>
+            <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section id="inicio" class="hero">
+    <div class="container">
+        <h1 class="hero-title">Excelência em Advocacia e Consultoria Jurídica</h1>
+        <p class="hero-subtitle">
+            Atuação nas áreas Trabalhista, Civil, Empresarial e Tributária
+        </p>
+        <button class="btn btn-primary" onclick="scrollToAtendimento()">
+            Solicitar Atendimento
+        </button>
+    </div>
+</section>
+
+<section id="sobre" class="about">
+    <div class="container">
+        <h2>Sobre o Escritório</h2>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    O Escritório Nogueiras atua com excelência na advocacia e consultoria jurídica,
+                    oferecendo soluções seguras, estratégicas e personalizadas.
+                </p>
+                <p>
+                    Nosso compromisso é com a ética, transparência e atendimento humanizado,
+                    buscando sempre a melhor solução para cada cliente.
+                </p>
+            </div>
+
+            <div class="about-profile">
+                <h3>Miriam Nogueira</h3>
+                <p class="profession">Advogada</p>
+                <p class="oab">OAB/MS 23.907</p>
+                <p class="bio">
+                    Profissional dedicada, com ampla experiência nas áreas Trabalhista,
+                    Civil, Empresarial e Tributária.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="services">
+    <div class="container">
+        <h2>Áreas de Atuação</h2>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="selecionarServico('Trabalhista')">
+                <h3>Direito Trabalhista</h3>
+                <p>Atuação em rescisões, ações trabalhistas, direitos do trabalhador e do empregador.</p>
+                <button class="btn btn-secondary">Solicitar Atendimento</button>
+            </div>
+
+            <div class="service-card" onclick="selecionarServico('Civil')">
+                <h3>Direito Civil</h3>
+                <p>Contratos, responsabilidade civil, família, sucessões e demandas cíveis.</p>
+                <button class="btn btn-secondary">Solicitar Atendimento</button>
+            </div>
+
+            <div class="service-card" onclick="selecionarServico('Empresarial')">
+                <h3>Direito Empresarial</h3>
+                <p>Consultoria jurídica para empresas, contratos e questões societárias.</p>
+                <button class="btn btn-secondary">Solicitar Atendimento</button>
+            </div>
+
+            <div class="service-card" onclick="selecionarServico('Tributário')">
+                <h3>Direito Tributário</h3>
+                <p>Planejamento fiscal, regularização de débitos e defesa administrativa.</p>
+                <button class="btn btn-secondary">Solicitar Atendimento</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="atendimento" class="contact-form-section">
+    <div class="container">
+        <h2>Solicite seu Atendimento</h2>
+
+        <form id="contactForm" class="contact-form" onsubmit="enviarFormulario(event)">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" id="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Serviço</label>
+                <select id="servico" required>
+                    <option value="">Selecione</option>
+                    <option>Trabalhista</option>
+                    <option>Civil</option>
+                    <option>Empresarial</option>
+                    <option>Tributário</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Descrição do Caso</label>
+                <textarea id="descricao" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Enviar Solicitação
+            </button>
+        </form>
+    </div>
+</section>
+
+<section id="contato" class="contact-info">
+    <div class="container">
+        <h2>Contato</h2>
+
+        <p>📞 (67) 99268-0574</p>
+        <p>✉️ miriamnogueira@gmail.com</p>
+        <p>📍 Rua das Garças, 1483 – Centro</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© Escritório Nogueiras – Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
